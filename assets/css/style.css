@@ -1,0 +1,177 @@
+/* RESET CSS */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: Helvetica , Arial, sans-serif;
+}
+/*  1.Vị trí
+    2.Kích thước (width , height)
+    3.Màu sắc
+    4.Kiểu dáng(Kiểu chữ , hình tròn , vuông.....) */
+#main {
+    
+}
+#header {
+    height: 46px;
+    width : 100%;
+    background-color: #000;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
+
+#nav{
+    display: inline-block;
+}
+#nav, .subnav {
+    list-style-type: none;
+}
+
+#nav li {
+    /* display default of li is list-item */
+    display: inline-block;
+    position: relative;
+}
+
+#nav > li > a{
+    color: #fff;
+    text-transform:uppercase ;
+}
+#nav li a {
+    line-height: 46px;
+    text-decoration: none;
+    padding: 0 24px;
+    display: block; 
+    /* display : block : ăn hết chiều ngang của thẻ chứa nó */
+    /* do thẻ a mặc định display : inline -> không xét được chiều rộng , cao  nó không ăn theo kích thước  */
+    /* do thế mình dùng inline-block để thẻ a ăn theo line-height */
+}
+#nav > li:hover > a{
+    /* pseudo element vào thẻ li vì theo kinh nghiệm nếu trường hợp hover vào more và select các li con của more
+    thì nó sẽ mất cái effect khi hover (trong trường hợp pseudo element vào thẻ a) => nên hover vào thẻ li */
+    color: #000;
+    background-color: #ccc;
+}
+
+#nav .subnav {
+    display: none;
+    top: 100%;
+    left: 0;
+    min-width: 160px;
+    position: absolute ;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+#nav .subnav li{
+    width: 100%;
+}
+#nav li:hover .subnav{
+    display: block;
+}
+#nav .subnav li:hover{
+    color: #000;
+    background-color: #ccc;
+}
+#nav .subnav a {
+    color : #000;
+    line-height: 30.5px;
+    padding: 0 12px;
+}
+
+#nav .nav-arrow-down{
+    font-size: 12px;
+}
+#header .search-btn{
+    float: right;
+    padding: 0 21px;
+}
+#header .search-btn:hover{
+    cursor: pointer;
+    background-color: #f44336;
+}
+#header .search-icon {
+    font-size: 20px;
+    color:#fff;
+    line-height: 46px;
+}
+
+#slider {
+    margin-top: 46px;
+    padding-top: 50%;
+    background: url(/assets/img/chicago.jpg) center top / cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+#slider .text-content{
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 47px;
+}
+#slider .text-content h2{
+    font-size: 24px;
+    font-weight: 500;
+}
+#slider .text-description{
+    margin-top: 25px;
+    font-size: 15px;
+}
+
+
+#content {
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding:64px 16px;
+    
+}
+#content .section-heading{
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: 500;
+    letter-spacing: 4px;
+    text-align: center;
+    margin: 10px;
+}
+#content .section-sub-heading{
+    text-align: center;
+    font-size: 15px;
+    margin: 15px;
+    opacity: 0.6;
+    font-style: italic;
+}
+#content .about-text{
+    text-align: justify;
+    line-height: 1.4;
+}
+#content .member-list{
+    margin-top: 48px;
+    text-align: center;
+}
+#content .member-name{
+    font-size: 15px;
+    margin: 15px 0;
+}
+#content .member-img{
+    width: 154px;
+    border-radius: 4px;
+}
+#content .member-list .member-item{
+    float: left;
+    width: calc(100% / 3);
+    
+}
+.clear{
+    clear: both;
+}
+
+#footer {
+    
+}
