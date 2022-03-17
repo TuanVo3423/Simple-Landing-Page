@@ -214,6 +214,53 @@ html{
     margin-top: -2px;
     
 }
+.place-list{
+    margin-top: 32px;
+    margin-left: -8px;
+    margin-right: -8px;
+    margin-bottom: 64px;
+}
+.place-list .place-item{
+    float: left;
+    width: calc(100%/3);
+    padding: 8px;
+    
+}
+.place-item .place-img{
+    width: 100%;
+    display: block;
+}
+.place-item .place-img:hover{
+    opacity: 0.6;
+}
+.place-body{
+    background-color: #fff;
+    padding: 0 16px;
+}
+.place-list .place-heading{
+    padding: 15px 0;
+    font-size: 15px;
+}
+.place-list .place-date{
+    padding-bottom: 15px;
+    font-size: 15px;
+}
+.place-list .place-dec{
+    padding-bottom: 15px;
+}
+.place-list .place-buy-btn{
+    background-color: #000;
+    color: #fff;
+    padding: 11px 16px;
+    display: inline-block;
+    text-decoration: none;
+    margin-bottom: 16px;
+}
+.place-list .place-buy-btn:hover{
+    background-color: #ccc;
+    color: #000;
+}
+
 
 #footer {
     
