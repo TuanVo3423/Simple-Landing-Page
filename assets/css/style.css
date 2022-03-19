@@ -263,16 +263,33 @@ html{
 }
 
 /* begin modal */
-.modal {
+.modal{
     position: fixed;
     top:0;
     right: 0;
     left: 0;
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.3);
-    display: flex;
     align-items: center;
     justify-content: center;
+    display: none;
+    animation: ModalFaceIn 0.6s;
+}
+.modal.open{
+    display: flex;
+}
+@keyframes ModalFaceIn{
+    from{
+        opacity: 0;
+        transform: translateY(-140px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0);
+
+    }
+
 }
 
 .modal-main{
