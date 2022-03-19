@@ -6,7 +6,33 @@
 }
 
 html{
+    scroll-behavior: smooth;
     font-family: Helvetica , Arial, sans-serif;
+}
+/* ROW COL */
+.row {
+    margin-left: -8px;
+    margin-right: -8px;
+}
+.col{
+    float: left;
+    padding:8px;
+}
+.col-third{
+    width: calc(100%/3);
+}
+.col-half{
+    width: 50%;
+}
+.col-full{
+    width: 100%;
+}
+
+.place-item{
+    float: left;
+    padding:8px;
+    width: calc(100%/3);
+    
 }
 /*  1.Vị trí
     2.Kích thước (width , height)
@@ -131,7 +157,7 @@ html{
     width: 800px;
     margin-left: auto;
     margin-right: auto;
-    padding:64px 16px;
+    padding:64px 0 112px;
     
 }
 #content .section-heading{
@@ -217,16 +243,9 @@ html{
 }
 .place-list{
     margin-top: 32px;
-    margin-left: -8px;
-    margin-right: -8px;
     margin-bottom: 64px;
 }
-.place-list .place-item{
-    float: left;
-    width: calc(100%/3);
-    padding: 8px;
-    
-}
+
 .place-item .place-img{
     width: 100%;
     display: block;
@@ -256,12 +275,54 @@ html{
     display: inline-block;
     text-decoration: none;
     margin-bottom: 16px;
+    cursor: pointer;
+    border: none;
 }
 .place-list .place-buy-btn:hover{
     background-color: #ccc;
     color: #000;
 }
 
+.contact-content {
+    padding-top: 48px;
+    
+}
+.contact-info{
+    font-size: 18px;
+    padding: 18px 0;
+}
+.contact-info p{
+    margin-bottom: 10px;
+}
+.contact-info i[class*="ti-"] {
+    width: 30px;
+    display: inline-block;
+}
+.contact-form{
+    font-size: 15px;
+}
+.form-control{
+    padding: 11px;
+    border: solid 1px #ddd;
+    width: 100%;
+}
+.form-send{
+    margin-top: 16px;
+    padding: 10px 16px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    float: right;
+    cursor: pointer;
+}
+.form-send:hover{
+    background-color: #ccc;
+    color: #000;
+    
+}
+.map-section img{
+    width: 100%;
+}
 /* begin modal */
 .modal{
     position: fixed;
@@ -385,6 +446,30 @@ html{
 
 
 #footer {
+    padding: 64px 16px;
     
+}
+#footer .social-list a {
+    font-size: 24px;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.6);
+}
+#footer .social-list a:hover{
+    color: rgba(0, 0, 0, 0.3);
+}
+#footer .social-list{
+    text-align: center;
+    
+    padding-bottom: 20px;
+    
+}
+#footer a,
+#footer p{
+    text-align: center;
+    font-size: 15px;
+    color: rgba(0, 0, 0, 0.6);
+}
+#footer p:hover{
+    color: rgba(0, 0, 0, 0.3);
 }
 
