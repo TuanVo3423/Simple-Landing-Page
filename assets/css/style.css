@@ -49,6 +49,7 @@ html{
     position: fixed;
     top: 0;
     z-index: 1;
+    overflow: hidden;
 }
 
 #nav{
@@ -112,14 +113,23 @@ html{
 #nav .nav-arrow-down{
     font-size: 12px;
 }
+#header .mobile-menu-btn,
 #header .search-btn{
     float: right;
     padding: 0 21px;
+}
+#header .mobile-menu-btn:hover{
+    background-color: #ccc;
+    
+}
+#header .mobile-menu-btn:hover .ti-menu{
+    color: #000;
 }
 #header .search-btn:hover{
     cursor: pointer;
     background-color: #f44336;
 }
+#header .ti-menu,
 #header .search-icon {
     font-size: 20px;
     color:#fff;
@@ -129,7 +139,7 @@ html{
 #slider {
     margin-top: 46px;
     padding-top: 50%;
-    background: url(/assets/img/chicago.jpg) center top / cover;
+    background: url(/assets//img/chicago.jpg) center top / cover;
     background-repeat: no-repeat;
     position: relative;
 }
@@ -155,9 +165,12 @@ html{
 } */
 #content .content-section {
     width: 800px;
+    max-width: 100%;
     margin-left: auto;
     margin-right: auto;
     padding:64px 0 112px;
+    padding-left: 16px;
+    padding-right: 16px;
     
 }
 #content .section-heading{
