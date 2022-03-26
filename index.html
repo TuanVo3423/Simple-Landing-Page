@@ -36,6 +36,7 @@
             <div class="search-btn">
                 <i class="search-icon ti-search"></i>
             </div>
+            
             <div id="mobile-menu" class="mobile-menu-btn js-menu">
                 <i class="ti-menu"></i>
             </div>
@@ -57,15 +58,15 @@
                 </p>
 
                 <div class="member-list">
-                    <div class="member-item">
+                    <div class="member-item-mobile member-item">
                         <p class="member-name">Name</p>
                         <img src="./assets/img/bandmember.jpg" alt="Image" class="member-img">
                     </div>
-                    <div class="member-item">
+                    <div class="member-item-mobile member-item">
                         <p class="member-name">Name</p>
                         <img src="./assets/img/bandmember.jpg" alt="Image" class="member-img">
                     </div>
-                    <div class="member-item">
+                    <div class="member-item-mobile member-item">
                         <p class="member-name">Name</p>
                         <img src="./assets/img/bandmember.jpg" alt="Image" class="member-img">
                     </div>
@@ -75,7 +76,7 @@
             
             <!-- TOUR DATE -->
             <div id="Tour" class="tour-section">
-                <div class="content-section">
+                <div class="content-section content-mobile">
                     <h2 class="section-heading">TOUR DATES</h2>
                     <p class="section-sub-heading">Remember to book your tickets!</p>
                     <ul class="tickets-list">
@@ -144,11 +145,11 @@
                     <div class="col col-half contact-form">
                         <form action="">
                         <div class="row">
-                            <div class="col col-half">
+                            <div class="col col-half contact-form-full">
                                 <input type="text" name="" placeholder="Name" required class="form-control">
                                 
                             </div>
-                            <div class="col col-half">
+                            <div class="col col-half contact-form-full">
                                 <input type="email" name="" placeholder="Email" required class="form-control">
                             </div>
                             
@@ -237,9 +238,10 @@
         var Menubtn = document.getElementById('mobile-menu')
         var header = document.getElementById('header')
         var menuLists = document.querySelectorAll('#nav li a[href*="#"]')
+        
+        // nhan nut menu
        Menubtn.onclick = function()
        {
-           console.log(header.clientHeight);
            var isClose = header.clientHeight === 46;
            if(isClose)
            {
@@ -249,11 +251,24 @@
                header.style.height ='46px';
            }
        }
+       // nhan vo cac menu item
        for (var i = 0 ; i < menuLists.length ;i++)
        {
            var menuItem = menuLists[i];
-           menuItem.onclick = function(){
-               header.style.height = '46px';
+           
+           menuItem.onclick = function(event){
+               var MoreClick = this.nextElementSibling && this.nextElementSibling.classList.contains('subnav');
+               console.log(MoreClick)
+               if(MoreClick)
+               {
+                header.style.height = 'auto';
+                event.preventDefault();
+               }
+               else{
+                header.style.height = '46px';
+                
+               }
+               
            }
        }
     </script>
