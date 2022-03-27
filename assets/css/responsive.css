@@ -5,11 +5,31 @@
         display: none;
     }
 } 
+/* Tablet and mobile */
+@media (max-width : 1023px)
+{
+    .place-list .place-buy-btn{
+        padding: 15px 16px;
+    }
+    .form-control {
+        padding: 14px;
+    }
+    .contact-info{
+        line-height: 1.8;
+    }
+    #footer .social-list a{
+        font-size: 30px;
+        margin: 0 8px;
+    }
+}
 /* Tablet */
 @media (min-width: 740px) and (max-width : 1023px)
 {
     #header .mobile-menu-btn{
         display: none;
+    }
+    .form-send{
+        padding: 15px 24px;
     }
 }
 /* Moblie */
@@ -67,7 +87,7 @@
         width: 100%;
     }
     .form-send{
-        padding: 10px 24px;
+        padding: 15px 24px;
         width: 100%;
     }
     #content .content-mobile{

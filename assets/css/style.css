@@ -303,6 +303,12 @@ html{
     font-size: 18px;
     padding: 18px 0;
 }
+.contact-info a{
+    opacity: 0.6;
+}
+.contact-info a:hover{
+    opacity: 1;
+}
 .contact-info p{
     margin-bottom: 10px;
 }
